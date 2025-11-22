@@ -2237,9 +2237,11 @@ async exportConfig(request, env, ctx) {
     <head>
       <meta charset="UTF-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>拾光集 - 精品网址导航</title>
+      <title>宝哥导航 - 精品网址导航</title>
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet"/>
-      <link rel="icon" href="https://www.wangwangit.com/images/head/a.webp" type="image/webp"/>
+      <link rel="icon" href="https://www.google.com/s2/favicons?domain=wangwangit.com" type="image/webp"/>
+      
+
       <script src="https://cdn.tailwindcss.com"></script>
       <script>
         tailwind.config = {
@@ -2403,7 +2405,7 @@ async exportConfig(request, env, ctx) {
       <aside id="sidebar" class="sidebar fixed left-0 top-0 h-full w-64 bg-white shadow-md border-r border-primary-100/60 z-50 overflow-y-auto mobile-sidebar lg:transform-none transition-all duration-300">
         <div class="p-6">
           <div class="flex items-center justify-between mb-8">
-            <h2 class="text-2xl font-bold text-primary-600 tracking-tight">拾光集</h2>
+            <h2 class="text-2xl font-bold text-primary-600 tracking-tight">宝哥专用</h2>
             <button id="closeSidebar" class="p-1 rounded-full hover:bg-gray-100 lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -2450,11 +2452,11 @@ async exportConfig(request, env, ctx) {
               访客书签提交功能已关闭
             </div>`}
             
-            <a href="https://www.wangwangit.com/" target="_blank" class="mt-4 flex items-center px-4 py-2 text-gray-600 hover:text-primary-500 transition duration-300">
+            <a href="https://wang.baoge.wang/" target="_blank" class="mt-4 flex items-center px-4 py-2 text-gray-600 hover:text-primary-500 transition duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
-              访问博客
+              发布页
             </a>
 
             <a href="/admin" target="_blank" class="mt-4 flex items-center px-4 py-2 text-gray-600 hover:text-primary-500 transition duration-300">
@@ -2476,16 +2478,18 @@ async exportConfig(request, env, ctx) {
               <span class="inline-flex items-center gap-2 rounded-full bg-primary-600/70 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-secondary-200/80">
                 精选 · 真实 · 有温度
               </span>
-              <h1 class="mt-4 text-3xl md:text-4xl font-semibold tracking-tight">拾光集导航</h1>
+              <h1 class="mt-4 text-3xl md:text-4xl font-semibold tracking-tight">宝哥导航</h1>
               <p class="mt-3 text-sm md:text-base text-secondary-100/90 leading-relaxed">
                 从效率工具到灵感站点，我们亲自挑选、亲手标注，只为帮助你更快找到值得信赖的优质资源。
               </p>
             </div>
             <div class="w-full md:w-auto flex justify-center md:justify-end">
-              <div class="rounded-2xl bg-white/10 backdrop-blur-md px-6 py-5 shadow-lg border border-white/10 text-left md:text-right">
+              <div class="rounded-2xl bg-white/10 backdrop-blur-md px-4 py-3 shadow-lg border border-white/10 text-left md:text-right">
                 <p class="text-xs uppercase tracking-[0.28em] text-secondary-100/70">Current Overview</p>
-                <p class="mt-3 text-2xl font-semibold">${totalSites}</p>
-                <p class="text-sm text-secondary-100/85">条书签 · ${catalogs.length} 个分类</p>
+                <div class="mt-2 flex items-baseline justify-start md:justify-end">
+                  <p class="text-xl font-semibold leading-none">${totalSites}</p>
+                  <p class="ml-2 text-sm text-secondary-100/85">条书签 · ${catalogs.length} 个分类</p>
+                </div>
                 <p class="mt-2 text-xs text-secondary-100/60">每日人工维护，确保链接状态可用、内容可靠。</p>
               </div>
             </div>
@@ -2578,9 +2582,9 @@ async exportConfig(request, env, ctx) {
         <!-- 页脚 -->
         <footer class="bg-white py-8 px-6 mt-12 border-t border-primary-100">
           <div class="max-w-5xl mx-auto text-center">
-            <p class="text-gray-500">© ${new Date().getFullYear()} 拾光集 | 愿你在此找到方向</p>
+            <p class="text-gray-500">© ${new Date().getFullYear()} 宝哥 | 愿你在此找到方向</p>
             <div class="mt-4 flex justify-center space-x-6">
-              <a href="https://www.wangwangit.com/" target="_blank" class="text-gray-400 hover:text-primary-500 transition-colors">
+              <a href="https://weblog.baoge.wang/" target="_blank" class="text-gray-400 hover:text-primary-500 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
