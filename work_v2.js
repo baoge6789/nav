@@ -898,7 +898,7 @@ async exportConfig(request, env, ctx) {
                     <tbody id="categoryTableBody">
                       <tr><td colspan="4">加载中...</td></tr>
                     </tbody>
-                  </table>
+                  </table>admin.css
                 </div>
               </div>
             </div>
@@ -2249,17 +2249,17 @@ async exportConfig(request, env, ctx) {
             extend: {
               colors: {
                 primary: {
-                  50: '#f3f5f9',
-                  100: '#e1e7f1',
-                  200: '#c3d0e3',
-                  300: '#9cb3d1',
-                  400: '#6c8fba',
-                  500: '#416d9d',
-                  600: '#305580',
-                  700: '#254267',
-                  800: '#1d3552',
-                  900: '#192e45',
-                  950: '#101e2d',
+                  50: '#eef2ff',
+                  100: '#e0e7ff',
+                  200: '#c7d2fe',
+                  300: '#a5b4fc',
+                  400: '#818cf8',
+                  500: '#6366f1', // 修改这里为您的主蓝色
+                  600: '#4f46e5',
+                  700: '#4338ca',
+                  800: '#3730a3',
+                  900: '#312e81',
+                  950: '#1e1b4b',
                 },
                 secondary: {
                   50: '#fdf8f3',
@@ -2334,7 +2334,7 @@ async exportConfig(request, env, ctx) {
         }
         
         /* 移动端侧边栏 */
-        @media (max-width: 768px) {
+        @media (max-width: 1023px) {
           .mobile-sidebar {
             transform: translateX(-100%);
             transition: transform 0.3s ease;
@@ -2371,12 +2371,12 @@ async exportConfig(request, env, ctx) {
             margin-left: -16rem;
           }
           #sidebar-toggle:checked ~ .main-content {
-            margin-left: 0;
+            margin-left: 0
           }
         }
       </style>
     </head>
-    <body class="bg-secondary-50 font-sans text-gray-800">
+    <body class="bg-white font-sans text-gray-800">
       <!-- 侧边栏开关 -->
       <input type="checkbox" id="sidebar-toggle" class="hidden">
       
@@ -2475,10 +2475,10 @@ async exportConfig(request, env, ctx) {
         <header class="bg-primary-700 text-white py-10 px-6 md:px-10 border-b border-primary-600 shadow-sm">
           <div class="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div class="flex-1 text-center md:text-left">
-              <span class="inline-flex items-center gap-2 rounded-full bg-primary-600/70 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-secondary-200/80">
+              <span class="inline-flex items-center gap-2 rounded-full bg-primary-500 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-secondary-200/80">
                 精选 · 真实 · 有温度
               </span>
-              <h1 class="mt-4 text-3xl md:text-4xl font-semibold tracking-tight">宝哥导航</h1>
+              <h1 class="mt-4 text-3xl md:text-4xl font-semibold tracking-tight">网址导航</h1>
               <p class="mt-3 text-sm md:text-base text-secondary-100/90 leading-relaxed">
                 从效率工具到灵感站点，我们亲自挑选、亲手标注，只为帮助你更快找到值得信赖的优质资源。
               </p>
@@ -2519,7 +2519,7 @@ async exportConfig(request, env, ctx) {
           </div>
           
           <!-- 网站卡片网格 -->
-          <div class="rounded-2xl border border-primary-100/60 bg-white/80 backdrop-blur-sm p-4 sm:p-6 shadow-sm">
+          <div class="rounded-2xl border border-primary-100/60 bg-primary-50 backdrop-blur-sm p-4 sm:p-6 shadow-sm">
             <div id="sitesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
               ${currentSites.map((site) => {
               const rawName = site.name || '未命名';
@@ -2539,7 +2539,7 @@ async exportConfig(request, env, ctx) {
               const safeDataCatalog = escapeHTML(site.catelog || '');
               const hasValidUrl = Boolean(normalizedUrl);
               return `
-                <div class="site-card group bg-white border border-primary-100/60 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-[2px] transition-all duration-200 overflow-hidden" data-id="${site.id}" data-name="${safeDataName}" data-url="${dataUrlAttr}" data-catalog="${safeDataCatalog}">
+                <div class="site-card group bg-secondary-50 border border-primary-100/60 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-[2px] transition-all duration-200 overflow-hidden" data-id="${site.id}" data-name="${safeDataName}" data-url="${dataUrlAttr}" data-catalog="${safeDataCatalog}">
                   <div class="p-5">
                     <a href="${hrefValue}" ${hasValidUrl ? 'target="_blank" rel="noopener noreferrer"' : ''} class="block">
                       <div class="flex items-start">
